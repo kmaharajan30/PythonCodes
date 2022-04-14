@@ -1,0 +1,25 @@
+Pseudocode:-
+SET cart_total = 0
+SET cart_items = 0
+
+(ADD items to cart)
+WHILE cart_item > 0
+	cart_total = cart_total + cart_item
+IF Person wish to Add items
+	cart_total = cart_total + cart_item
+IF Person wish to Remove items
+	cart_total = cart_total - cart_item
+
+(Price Discount )
+IF cart_total >= 10000    // 10% discount if the total price is above 10000
+	cart_total = cart_total - (cart_total * 10/100)
+IF cart_total >= 5000     // 5% discount
+	cart_total = cart_total - (cart_total * 5/100)
+
+(Payment)
+READ card
+IF card_amount > cart_total
+	MAKE payment
+	DISPLAY receipt
+IF card_amount < cart_total
+	DISPLAY Your account balance is insufficient.
