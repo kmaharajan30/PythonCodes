@@ -1,0 +1,36 @@
+Calculator:
+
+def add(a,b):
+    return a+b
+def subtract(c,d):
+    return c-d
+def multiply(a,b):
+    return a*b
+def divide(a,b):
+    return a/b
+
+operation = input('''
+Please type the operation to be done:
++ for addition
+- for subtraction
+* for multiplication
+/ for division
+''')
+
+number_1 = int(input('Enter your first number: '))
+number_2 = int(input('Enter your second number: '))
+
+if operation == '+':
+    print('{} + {} ='.format(number_1, number_2),add(number_1,number_2))
+
+elif operation == '-':
+    print('{} - {} ='.format(number_1, number_2),subtract(number_1,number_2))
+
+elif operation == '*':
+    print('{} * {} ='.format(number_1, number_2),multiply(number_1,number_2))
+
+elif operation == '/':
+    print('{} / {} ='.format(number_1, number_2),divide(number_1,number_2))
+
+else:
+    print('Incorrect Operation')

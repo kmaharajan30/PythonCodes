@@ -1,0 +1,35 @@
+ CASHLESS PAYMENT :-
+        
+print("**** CASHLESS SUPERMARKET ****")
+items = {}
+num=int(input("Enter the no of items: "))
+items=dict(input().split() for i in range(num))
+for keys in items:
+    items[keys]=int(items[keys])
+print(items)
+
+def total_price(items):
+    total_price=0
+    for i in items.values():
+        total_price=total_price+i
+    return total_price
+print("TOTAL PRICE: ",total_price(items),"Rs") 
+
+sum=total_price(items)
+if(sum>=1000 & sum<=2000): #10% discount for the price range 1000 to 2000
+    sum=sum-(sum*10/100)
+elif(sum>=2000 & sum<=5000): # 20% discount
+    sum=sum-(sum*20/100)
+
+print("PRICE AFTER DISCOUNT: ",sum,"Rs")
+
+
+final_payment=int(input("Enter the amount in your Account: "))
+if(final_payment>=sum):
+    print("PAYMENT COMPLETED..")
+else:
+    print('''
+          Insufficient Balance...
+          *** KINDLY CHECK YOUR ACCOUNT BALANCE ***
+          '''
+          )    

@@ -1,0 +1,8 @@
+Sum of values in Dictionary:
+
+dict1 = {'a': 10,'b':11,'c':13,'d':14,'e':16,'f':17,'g':56,'h':7,'i':54,'j':87}
+sum = 0
+for i in dict1:
+    sum = sum + dict1[i]
+final_sum = str(sum)
+print("Sum : " + final_sum)
